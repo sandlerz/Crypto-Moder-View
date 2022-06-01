@@ -1,4 +1,5 @@
 import { NavLink, Outlet } from 'react-router-dom'
+import { high, low, main, news, save } from '../Assets/Images/NavIcons'
 
 export default function Navbar() {
   return (
@@ -11,7 +12,7 @@ export default function Navbar() {
               isActive ? 'IconNav active' : 'IconNav'
             }
           >
-            <img src={''} />
+            <img src={main} alt="" />
           </NavLink>
         </li>
         <li>
@@ -21,7 +22,7 @@ export default function Navbar() {
               isActive ? 'IconNav active' : 'IconNav'
             }
           >
-            <img src={''} />
+            <img src={high} alt="" />
           </NavLink>
         </li>
         <li>
@@ -31,7 +32,7 @@ export default function Navbar() {
               isActive ? 'IconNav active' : 'IconNav'
             }
           >
-            <img src={''} />
+            <img src={low} alt="" />
           </NavLink>
         </li>
         <li>
@@ -41,7 +42,7 @@ export default function Navbar() {
               isActive ? 'IconNav active' : 'IconNav'
             }
           >
-            <img src={''} />
+            <img src={news} alt="" />
           </NavLink>
         </li>
         <li>
@@ -51,7 +52,7 @@ export default function Navbar() {
               isActive ? 'IconNav active' : 'IconNav'
             }
           >
-            <img src={''} />
+            <img src={save} alt="" />
           </NavLink>
         </li>
       </ul>
