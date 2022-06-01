@@ -17,7 +17,7 @@ const currencies = createSlice({
   reducers: {},
   extraReducers: builder => {
     builder.addCase(getCurrencies.fulfilled, (state, action) => {
-      state.coins.concat(action.payload.coins)
+      state.coins = action.payload.coins
     })
   },
 })
