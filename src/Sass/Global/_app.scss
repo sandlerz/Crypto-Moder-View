@@ -2,6 +2,7 @@
   width: 1440px;
   padding: 40px 25px;
   margin: auto;
-  display: flex;
-  gap: 25px;
+  display: grid;
+  grid-template: auto / 90px 1280px;
+  justify-content: space-between;
 }
