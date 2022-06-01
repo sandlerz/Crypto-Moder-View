@@ -1,4 +1,5 @@
 import { arrow } from '../Assets/Images/Util/index'
+import { cutDecimals } from '../Util/Util'
 
 export default function Coin({ data }) {
   const { name, symbol, icon, price, priceChange1d, priceChange1w } = data
@@ -16,7 +17,7 @@ export default function Coin({ data }) {
           <span className="coin__top__title__name">
             {name} <span>({symbol})</span>
           </span>
-          <span>$ {price.toLocaleString()}</span>
+          <span>$ {cutDecimals(price)}</span>
         </div>
         <div className="coin__top__save"></div>
       </div>
