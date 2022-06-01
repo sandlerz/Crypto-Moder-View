@@ -11,11 +11,16 @@ export const getCurrencies = createAsyncThunk(
 
 const currencies = createSlice({
   name: 'currencies',
-  initialState: {},
+  initialState: {
+    coins: [],
+  },
   reducers: {},
   extraReducers: builder => {
-    builder.addCase(getCurrencies.fulfilled, (state, action) => {})
+    builder.addCase(getCurrencies.fulfilled, (state, action) => {
+      state.coins.concat(action.payload.coins)
+    })
   },
 })
 
+export const selectCoins = state => state.currencies.coins
 export default currencies.reducer
