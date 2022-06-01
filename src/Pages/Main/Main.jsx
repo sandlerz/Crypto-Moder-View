@@ -1,3 +1,9 @@
+import Search from '../../Components/Search'
+
 export default function Main() {
-  return <div>Main</div>
+  return (
+    <main>
+      <Search />
+    </main>
+  )
 }
