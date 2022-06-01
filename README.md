@@ -35,6 +35,7 @@
 - select different categories of news
 - show news in the main page
 - Responsive Scroll
+- if you click on cards it redirects you to the coin page
 
 ## Setup
 
