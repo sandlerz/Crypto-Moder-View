@@ -2,6 +2,10 @@ import { arrow } from '../Assets/Images/Util/index'
 
 export default function Coin({ data }) {
   const { name, symbol, icon, price, priceChange1d, priceChange1w } = data
+
+  const colorPriceChange1d = Math.sign(priceChange1d) === 1 ? 'green' : 'red'
+  const colorPriceChange1w = Math.sign(priceChange1w) === 1 ? 'green' : 'red'
+
   return (
     <div className="coin">
       <div className="coin__top">
@@ -19,17 +23,21 @@ export default function Coin({ data }) {
       <div className="coin__bottom">
         <span>24h %</span>
         <div className="coin__bottom__priceChange">
-          <div className="coin__bottom__priceChange__img green__img">
+          <div
+            className={`coin__bottom__priceChange__img ${colorPriceChange1d}__img`}
+          >
             <img src={arrow} alt="" />
           </div>
-          <span className="green">{priceChange1d} %</span>
+          <span className={colorPriceChange1d}>{priceChange1d} %</span>
         </div>
         <span>7d %</span>
         <div className="coin__bottom__priceChange">
-          <div className="coin__bottom__priceChange__img red__img">
+          <div
+            className={`coin__bottom__priceChange__img ${colorPriceChange1w}__img`}
+          >
             <img src={arrow} alt="" />
           </div>
-          <span className="red">{priceChange1w} %</span>
+          <span className={colorPriceChange1w}>{priceChange1w} %</span>
         </div>
       </div>
     </div>
