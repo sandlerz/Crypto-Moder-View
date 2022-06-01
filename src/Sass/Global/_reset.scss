@@ -41,4 +41,8 @@ button,
 input {
   border: none;
   font-family: inherit;
+
+  &:focus {
+    outline: none;
+  }
 }
