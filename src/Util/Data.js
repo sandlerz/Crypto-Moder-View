@@ -3,7 +3,7 @@ const API_URL = 'https://api.coinstats.app/public/v1'
 export const getCoins = async (currency = 'USD', limit = '0') => {
   try {
     const response = await fetch(
-      `${API_URL}coins?skip=0&limit=${limit}&currency=${currency}`
+      `${API_URL}/coins?skip=0&limit=${limit}&currency=${currency}`
     )
     if (response.ok) {
       const data = await response.json()

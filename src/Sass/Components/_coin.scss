@@ -1,0 +1,85 @@
+.coin {
+  width: 248px;
+  height: 115px;
+  background-color: var(--elements-color);
+  border-radius: 20px;
+  padding: 10px;
+
+  &__top {
+    display: grid;
+    grid-template: auto / 40px 1fr 20px;
+    margin-bottom: 12px;
+
+    &__img {
+      max-width: 40px;
+      width: 40px;
+      min-width: 40px;
+    }
+
+    &__title {
+      display: flex;
+      flex-direction: column;
+      color: var(--text-main);
+      margin-left: 15px;
+      max-width: 150px;
+      &__name {
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-bottom: 2px;
+        white-space: nowrap;
+      }
+    }
+
+    &__save {
+      width: 100%;
+      margin-left: auto;
+      background-color: white;
+      height: 20px;
+      border-radius: 50%;
+    }
+  }
+
+  &__bottom {
+    display: grid;
+    grid-template: 20px 20px / auto auto;
+    justify-content: center;
+    text-align: right;
+    column-gap: 8px;
+    color: var(--text-main);
+
+    &__priceChange {
+      display: flex;
+      gap: 2px;
+      align-items: center;
+
+      &__img {
+        max-width: 20px;
+      }
+
+      span {
+        margin-left: auto;
+      }
+
+      .green {
+        color: var(--text-green);
+      }
+
+      .green__img {
+        transform: rotate(180deg);
+        filter: invert(68%) sepia(86%) saturate(2250%) hue-rotate(108deg)
+          brightness(93%) contrast(83%);
+      }
+
+      .red__img {
+        transform: rotate(0deg);
+        filter: invert(37%) sepia(80%) saturate(4542%) hue-rotate(338deg)
+          brightness(95%) contrast(93%);
+      }
+
+      .red {
+        color: var(--text-red);
+      }
+    }
+  }
+}
