@@ -4,15 +4,17 @@ import Navbar from '../Components/Navbar'
 
 export default function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Navbar />}>
-        <Route index element={<Main />} />
-        <Route path="/high" element={<High />} />
-        <Route path="/low" element={<Low />} />
-        <Route path="/save" element={<Save />} />
-        <Route path="/news" element={<News />} />
-        <Route path="*" element={<Error />} />
-      </Route>
-    </Routes>
+    <div className="app">
+      <Routes>
+        <Route path="/" element={<Navbar />}>
+          <Route index element={<Main />} />
+          <Route path="/high" element={<High />} />
+          <Route path="/low" element={<Low />} />
+          <Route path="/save" element={<Save />} />
+          <Route path="/news" element={<News />} />
+          <Route path="*" element={<Error />} />
+        </Route>
+      </Routes>
+    </div>
   )
 }

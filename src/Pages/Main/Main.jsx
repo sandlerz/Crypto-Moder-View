@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { getCurrencies, selectCoins } from './MainSlice'
 import Coin from '../../Components/Coin'
+import Search from '../../Components/Search'
 
 export default function Main() {
   const dispatch = useDispatch()
@@ -14,5 +15,11 @@ export default function Main() {
     }
   }, [dispatch, coins.length])
 
-  return <main>{mapCoins}</main>
+  return (
+    <main className="main">
+      <Search />
+      <h1>Currencies</h1>
+      <div className="main__coins">{mapCoins}</div>
+    </main>
+  )
 }
