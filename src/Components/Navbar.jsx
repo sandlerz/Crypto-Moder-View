@@ -6,6 +6,7 @@ import {
   news,
   save,
   logoIcon,
+  settings,
 } from '../Assets/Images/NavIcons'
 
 export default function Navbar() {
@@ -67,6 +68,9 @@ export default function Navbar() {
             </NavLink>
           </li>
         </ul>
+        <div>
+          <img src={settings} alt="" />
+        </div>
       </div>
       <Outlet />
     </>
