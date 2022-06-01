@@ -5,13 +5,13 @@ import Navbar from '../Components/Navbar'
 export default function App() {
   return (
     <Routes>
-      <Route to="/" element={<Navbar />}>
+      <Route path="/" element={<Navbar />}>
         <Route index element={<Main />} />
-        <Route to="/high" element={<High />} />
-        <Route to="/low" element={<Low />} />
-        <Route to="/save" element={<Save />} />
-        <Route to="/news" element={<News />} />
-        <Route to="*" element={<Error />} />
+        <Route path="/high" element={<High />} />
+        <Route path="/low" element={<Low />} />
+        <Route path="/save" element={<Save />} />
+        <Route path="/news" element={<News />} />
+        <Route path="*" element={<Error />} />
       </Route>
     </Routes>
   )
