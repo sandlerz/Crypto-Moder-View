@@ -1,0 +1,19 @@
+.search {
+  display: flex;
+  gap: 10px;
+
+  &__icon {
+    max-width: 40px;
+  }
+
+  &__input {
+    background-color: transparent;
+    border: none;
+    caret-color: white;
+    color: var(--text-main);
+
+    &::placeholder {
+      color: #454954;
+    }
+  }
+}

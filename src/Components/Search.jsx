@@ -6,7 +6,11 @@ export default function Search() {
       <div className="search__icon">
         <img src={search} alt="" />
       </div>
-      <input type="text" className="search__input" />
+      <input
+        type="text"
+        className="search__input"
+        placeholder="Search for currencies"
+      />
     </div>
   )
 }
