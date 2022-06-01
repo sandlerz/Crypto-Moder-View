@@ -1,13 +1,19 @@
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { getCurrencies, selectCoins } from './MainSlice'
+import { getCurrencies, selectCoins, selectCoinsFilter } from './MainSlice'
 import Coin from '../../Components/Coin'
 import Search from '../../Components/Search'
 
 export default function Main() {
   const dispatch = useDispatch()
   const coins = useSelector(selectCoins)
-  const mapCoins = coins.map(data => <Coin data={data} key={data.id} />)
+  const filter = useSelector(selectCoinsFilter)
+  const mapCoins = coins
+    .filter(data => {
+      if (filter === '') return true
+      return data.name.toLowerCase().includes(filter)
+    })
+    .map(data => <Coin data={data} key={data.id} />)
 
   useEffect(() => {
     if (coins.length === 0) {
