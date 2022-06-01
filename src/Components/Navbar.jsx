@@ -5,19 +5,54 @@ export default function Navbar() {
     <>
       <ul>
         <li>
-          <NavLink to="/"></NavLink>
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive ? 'IconNav active' : 'IconNav'
+            }
+          >
+            <img src={''} />
+          </NavLink>
         </li>
         <li>
-          <NavLink to="high"></NavLink>
+          <NavLink
+            to="high"
+            className={({ isActive }) =>
+              isActive ? 'IconNav active' : 'IconNav'
+            }
+          >
+            <img src={''} />
+          </NavLink>
         </li>
         <li>
-          <NavLink to="low"></NavLink>
+          <NavLink
+            to="low"
+            className={({ isActive }) =>
+              isActive ? 'IconNav active' : 'IconNav'
+            }
+          >
+            <img src={''} />
+          </NavLink>
         </li>
         <li>
-          <NavLink to="save"></NavLink>
+          <NavLink
+            to="save"
+            className={({ isActive }) =>
+              isActive ? 'IconNav active' : 'IconNav'
+            }
+          >
+            <img src={''} />
+          </NavLink>
         </li>
         <li>
-          <NavLink to="news"></NavLink>
+          <NavLink
+            to="news"
+            className={({ isActive }) =>
+              isActive ? 'IconNav active' : 'IconNav'
+            }
+          >
+            <img src={''} />
+          </NavLink>
         </li>
       </ul>
       <Outlet />
