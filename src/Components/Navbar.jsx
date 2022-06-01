@@ -12,63 +12,50 @@ import {
 export default function Navbar() {
   return (
     <>
-      <div>
-        <div>
+      <div className="navbar">
+        <div className="navbar__logo">
           <img src={logoIcon} alt="" />
         </div>
-        <ul>
-          <li>
-            <NavLink
-              to="/"
-              className={({ isActive }) =>
-                isActive ? 'IconNav active' : 'IconNav'
-              }
-            >
+        <ul className="navbar__navLink">
+          <li className="navbar__navLink__item">
+            <NavLink to="/" className={({ isActive }) => isActive && 'active'}>
               <img src={main} alt="" />
             </NavLink>
           </li>
-          <li>
+          <li className="navbar__navLink__item">
             <NavLink
               to="high"
-              className={({ isActive }) =>
-                isActive ? 'IconNav active' : 'IconNav'
-              }
+              className={({ isActive }) => isActive && 'active'}
             >
               <img src={high} alt="" />
             </NavLink>
           </li>
-          <li>
+          <li className="navbar__navLink__item">
             <NavLink
               to="low"
-              className={({ isActive }) =>
-                isActive ? 'IconNav active' : 'IconNav'
-              }
+              className={({ isActive }) => isActive && 'active'}
             >
               <img src={low} alt="" />
             </NavLink>
           </li>
-          <li>
+          <li className="navbar__navLink__item">
             <NavLink
               to="save"
-              className={({ isActive }) =>
-                isActive ? 'IconNav active' : 'IconNav'
-              }
+              className={({ isActive }) => isActive && 'active'}
             >
               <img src={news} alt="" />
             </NavLink>
           </li>
-          <li>
+          <li className="navbar__navLink__item">
             <NavLink
               to="news"
-              className={({ isActive }) =>
-                isActive ? 'IconNav active' : 'IconNav'
-              }
+              className={({ isActive }) => isActive && 'active'}
             >
               <img src={save} alt="" />
             </NavLink>
           </li>
         </ul>
-        <div>
+        <div className="navbar__settings">
           <img src={settings} alt="" />
         </div>
       </div>
