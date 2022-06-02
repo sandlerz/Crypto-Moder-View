@@ -1,5 +1,6 @@
 .navbar {
-  width: 90px;
+  max-width: 90px;
+  min-width: 90px;
   height: 850px;
   background-color: var(--elements-color);
   border-radius: 20px;
@@ -11,7 +12,7 @@
   &__logo {
     max-width: 50px;
     padding-bottom: 20px;
-    border-bottom: 3px solid black;
+    border-bottom: 3px solid #10141f;
     margin-bottom: 30px;
   }
 

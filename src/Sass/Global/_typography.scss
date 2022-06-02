@@ -2,8 +2,13 @@ h1,
 h2 {
   font-size: 28px;
   font-weight: var(--text-weigh-medium);
+  color: var(--text-main);
 }
 
 span {
   font-size: 16px;
+}
+
+input {
+  font-size: 22px;
 }
