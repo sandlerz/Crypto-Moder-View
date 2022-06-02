@@ -1,0 +1,45 @@
+.trendingCoin {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  background-color: var(--elements-color);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+
+  &__name {
+    color: var(--text-main);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__img {
+    min-width: 75px;
+    max-width: 75px;
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    &__img {
+      max-width: 25px;
+    }
+  }
+
+  &__save {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: gray;
+    right: 8px;
+    top: 8px;
+  }
+}

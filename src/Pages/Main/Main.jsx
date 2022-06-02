@@ -36,7 +36,7 @@ export default function Main() {
     <main className="main">
       <Search />
       <h1>Trending</h1>
-      <section>{trending}</section>
+      <section className="main__trendingCoins">{trending}</section>
       <h2>Currencies</h2>
       <section className="main__coins">{mapCoins}</section>
     </main>

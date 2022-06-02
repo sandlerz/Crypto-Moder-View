@@ -3,6 +3,11 @@
   flex-direction: column;
   gap: 10px;
 
+  &__trendingCoins {
+    display: flex;
+    gap: 20px;
+  }
+
   &__coins {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
