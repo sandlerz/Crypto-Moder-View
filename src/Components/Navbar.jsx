@@ -18,14 +18,17 @@ export default function Navbar() {
         </div>
         <ul className="navbar__navLink">
           <li className="navbar__navLink__item">
-            <NavLink to="/" className={({ isActive }) => isActive && 'active'}>
+            <NavLink
+              to="/"
+              className={({ isActive }) => (isActive ? 'active' : '')}
+            >
               <img src={main} alt="" />
             </NavLink>
           </li>
           <li className="navbar__navLink__item">
             <NavLink
               to="high"
-              className={({ isActive }) => isActive && 'active'}
+              className={({ isActive }) => (isActive ? 'active' : '')}
             >
               <img src={high} alt="" />
             </NavLink>
@@ -33,7 +36,7 @@ export default function Navbar() {
           <li className="navbar__navLink__item">
             <NavLink
               to="low"
-              className={({ isActive }) => isActive && 'active'}
+              className={({ isActive }) => (isActive ? 'active' : '')}
             >
               <img src={low} alt="" />
             </NavLink>
@@ -41,7 +44,7 @@ export default function Navbar() {
           <li className="navbar__navLink__item">
             <NavLink
               to="save"
-              className={({ isActive }) => isActive && 'active'}
+              className={({ isActive }) => (isActive ? 'active' : '')}
             >
               <img src={news} alt="" />
             </NavLink>
@@ -49,7 +52,7 @@ export default function Navbar() {
           <li className="navbar__navLink__item">
             <NavLink
               to="news"
-              className={({ isActive }) => isActive && 'active'}
+              className={({ isActive }) => (isActive ? 'active' : '')}
             >
               <img src={save} alt="" />
             </NavLink>
