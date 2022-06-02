@@ -44,6 +44,9 @@ const currencies = createSlice({
 })
 
 export const selectCoins = state => state.currencies.coins
+export const selectHigh = state => state.currencies.high
+export const selectLow = state => state.currencies.low
+export const selectTrending = state => state.currencies.trending
 export const selectCoinsFilter = state => state.currencies.filter
 
 export const { setFilter } = currencies.actions
