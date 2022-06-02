@@ -6,6 +6,24 @@
   &__trendingCoins {
     display: flex;
     gap: 20px;
+    width: 100%;
+    overflow-x: scroll;
+    padding-bottom: 5px;
+    scrollbar-color: #fff transparent;
+    scrollbar-width: thin;
+
+    &::-webkit-scrollbar {
+      height: 5px;
+    }
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #fff;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
   }
 
   &__coins {
