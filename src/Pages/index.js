@@ -1,5 +1,5 @@
 export { default as Main } from './Main/Main'
-export { default as High } from './High/High'
+export { default as BullishCoins } from './BullishCoins/BullishCoins'
 export { default as Low } from './Low/Low'
 export { default as News } from './News/News'
 export { default as Save } from './Save/Save'

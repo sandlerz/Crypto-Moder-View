@@ -27,7 +27,7 @@ export default function Navbar() {
           </li>
           <li className="navbar__navLink__item">
             <NavLink
-              to="high"
+              to="BullishCoins"
               className={({ isActive }) => (isActive ? 'active' : '')}
             >
               <img src={high} alt="" />
