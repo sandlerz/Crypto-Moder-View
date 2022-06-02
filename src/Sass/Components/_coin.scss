@@ -22,6 +22,7 @@
       color: var(--text-main);
       margin-left: 15px;
       max-width: 150px;
+
       &__name {
         width: 100%;
         overflow: hidden;
@@ -60,26 +61,25 @@
       span {
         margin-left: auto;
       }
-
-      .green {
-        color: var(--text-green);
-      }
-
-      .green__img {
-        transform: rotate(180deg);
-        filter: invert(68%) sepia(86%) saturate(2250%) hue-rotate(108deg)
-          brightness(93%) contrast(83%);
-      }
-
-      .red__img {
-        transform: rotate(0deg);
-        filter: invert(37%) sepia(80%) saturate(4542%) hue-rotate(338deg)
-          brightness(95%) contrast(93%);
-      }
-
-      .red {
-        color: var(--text-red);
-      }
     }
   }
+}
+.green {
+  color: var(--text-green);
+}
+
+.green__img {
+  transform: rotate(180deg);
+  filter: invert(68%) sepia(86%) saturate(2250%) hue-rotate(108deg)
+    brightness(93%) contrast(83%);
+}
+
+.red__img {
+  transform: rotate(0deg);
+  filter: invert(37%) sepia(80%) saturate(4542%) hue-rotate(338deg)
+    brightness(95%) contrast(93%);
+}
+
+.red {
+  color: var(--text-red);
 }
