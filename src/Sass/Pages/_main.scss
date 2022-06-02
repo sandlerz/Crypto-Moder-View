@@ -5,7 +5,7 @@
 
   &__coins {
     display: grid;
-    grid-template-columns: repeat(5, auto);
+    grid-template-columns: repeat(5, 1fr);
     gap: 10px;
   }
 }
