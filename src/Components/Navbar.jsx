@@ -43,7 +43,7 @@ export default function Navbar() {
           </li>
           <li className="navbar__navLink__item">
             <NavLink
-              to="save"
+              to="news"
               className={({ isActive }) => (isActive ? 'active' : '')}
             >
               <img src={news} alt="" />
@@ -51,7 +51,7 @@ export default function Navbar() {
           </li>
           <li className="navbar__navLink__item">
             <NavLink
-              to="news"
+              to="save"
               className={({ isActive }) => (isActive ? 'active' : '')}
             >
               <img src={save} alt="" />
