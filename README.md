@@ -14,7 +14,11 @@
 
 ## Wireframes
 
+![Desktop-wireframes](./public/Design/desktop-layout.jpg)
+
 ## Screenshots
+
+![Desktop-screenshot](./public/Design/Screenshot.jpg)
 
 ## Technologies used
 
