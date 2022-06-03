@@ -1,15 +1,27 @@
 import { Route, Routes } from 'react-router-dom'
-import { Main, High, Low, Save, News, Error } from '../Pages/index'
+import {
+  Main,
+  BullishCoins,
+  BearishCoins,
+  Save,
+  News,
+  Error,
+} from '../Pages/index'
+import Navbar from '../Components/Navbar'
 
 export default function App() {
   return (
-    <Routes>
-      <Route to="/" element={Main} />
-      <Route to="/high" element={High} />
-      <Route to="/low" element={Low} />
-      <Route to="/save" element={Save} />
-      <Route to="/news" element={News} />
-      <Route to="*" element={Error} />
-    </Routes>
+    <div className="app">
+      <Routes>
+        <Route path="/" element={<Navbar />}>
+          <Route index element={<Main />} />
+          <Route path="/bullishCoins" element={<BullishCoins />} />
+          <Route path="/bearishCoins" element={<BearishCoins />} />
+          <Route path="/save" element={<Save />} />
+          <Route path="/news" element={<News />} />
+          <Route path="*" element={<Error />} />
+        </Route>
+      </Routes>
+    </div>
   )
 }

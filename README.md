@@ -1,4 +1,4 @@
-# Title
+# Crypto modern view
 
 ## Table of Contents
 
@@ -14,13 +14,32 @@
 
 ## Wireframes
 
+![Desktop-wireframes](./public/Design/desktop-layout.jpg)
+
 ## Screenshots
+
+![Desktop-screenshot](./public/Design/Screenshot.jpg)
 
 ## Technologies used
 
+- React
+- Redux
+- React Router v6
+- Sass
+
 ## Features
 
+- See price and tendency of crypto coins
+- Search for any crypto
+
 ## Future work
+
+- select currency (USD or EUR)
+- keep track of bitcoin at the top of the page
+- select different categories of news
+- show news in the main page
+- Responsive Scroll
+- if you click on cards it redirects you to the coin page
 
 ## Setup
 
