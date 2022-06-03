@@ -27,7 +27,7 @@ export default function Navbar() {
           </li>
           <li className="navbar__navLink__item">
             <NavLink
-              to="BullishCoins"
+              to="bullishCoins"
               className={({ isActive }) => (isActive ? 'active' : '')}
             >
               <img src={high} alt="" />
@@ -35,7 +35,7 @@ export default function Navbar() {
           </li>
           <li className="navbar__navLink__item">
             <NavLink
-              to="low"
+              to="bearishCoins"
               className={({ isActive }) => (isActive ? 'active' : '')}
             >
               <img src={low} alt="" />

@@ -14,7 +14,7 @@ const currencies = createSlice({
   initialState: {
     coins: [],
     bullishCoins: [],
-    low: [],
+    bearishCoins: [],
     trending: [],
     filter: '',
   },
@@ -32,12 +32,12 @@ const currencies = createSlice({
       const trending = [...coins]
         .sort((a, b) => b.priceChange1d - a.priceChange1d)
         .filter(coin => coin.priceChange1d > 5)
-      const low = [...coins]
+      const bearishCoins = [...coins]
         .sort((a, b) => a.priceChange1d - b.priceChange1d)
         .filter(coin => coin.priceChange1d < 0)
       state.coins = coins
       state.bullishCoins = bullishCoins
-      state.low = low
+      state.bearishCoins = bearishCoins
       state.trending = trending
     })
   },
@@ -45,7 +45,7 @@ const currencies = createSlice({
 
 export const selectCoins = state => state.currencies.coins
 export const selectBullishCoins = state => state.currencies.bullishCoins
-export const selectLow = state => state.currencies.low
+export const selectBearishCoins = state => state.currencies.bearishCoins
 export const selectTrending = state => state.currencies.trending
 export const selectCoinsFilter = state => state.currencies.filter
 
