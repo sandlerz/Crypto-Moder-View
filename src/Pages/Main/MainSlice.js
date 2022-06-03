@@ -13,7 +13,7 @@ const currencies = createSlice({
   name: 'currencies',
   initialState: {
     coins: [],
-    high: [],
+    bullishCoins: [],
     low: [],
     trending: [],
     filter: '',
@@ -26,7 +26,7 @@ const currencies = createSlice({
   extraReducers: builder => {
     builder.addCase(getCurrencies.fulfilled, (state, action) => {
       const { coins } = action.payload
-      const high = [...coins]
+      const bullishCoins = [...coins]
         .sort((a, b) => b.priceChange1d - a.priceChange1d)
         .filter(coin => coin.priceChange1d > 0)
       const trending = [...coins]
@@ -36,7 +36,7 @@ const currencies = createSlice({
         .sort((a, b) => a.priceChange1d - b.priceChange1d)
         .filter(coin => coin.priceChange1d < 0)
       state.coins = coins
-      state.high = high
+      state.bullishCoins = bullishCoins
       state.low = low
       state.trending = trending
     })
@@ -44,7 +44,7 @@ const currencies = createSlice({
 })
 
 export const selectCoins = state => state.currencies.coins
-export const selectHigh = state => state.currencies.high
+export const selectBullishCoins = state => state.currencies.bullishCoins
 export const selectLow = state => state.currencies.low
 export const selectTrending = state => state.currencies.trending
 export const selectCoinsFilter = state => state.currencies.filter
