@@ -1,4 +1,4 @@
-import { arrow } from '../Assets/Images/Util/index'
+import { arrow, bookMark, bookMarkFilling } from '../Assets/Images/Util/index'
 import { cutDecimals } from '../Util/Util'
 
 export default function Coin({ data }) {
@@ -19,7 +19,9 @@ export default function Coin({ data }) {
           </span>
           <span>$ {cutDecimals(price)}</span>
         </div>
-        <div className="coin__top__save"></div>
+        <div className="coin__top__save">
+          <img src={bookMark} alt="" />
+        </div>
       </div>
       <div className="coin__bottom">
         <span>24h %</span>
