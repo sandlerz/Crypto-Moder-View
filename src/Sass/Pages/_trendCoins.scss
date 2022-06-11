@@ -1,10 +1,10 @@
 .coins-page {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 1rem;
   &__coins {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 10px;
+    gap: 1rem;
   }
 }

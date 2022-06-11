@@ -1,15 +1,15 @@
 .trendingCoin {
   position: relative;
-  width: 150px;
-  min-width: 150px;
-  height: 150px;
+  width: 15rem;
+  min-width: 15rem;
+  height: 15rem;
   background-color: var(--elements-color);
-  border-radius: 20px;
+  border-radius: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 7px;
+  gap: 0.7rem;
 
   &__name {
     color: var(--text-main);
@@ -19,17 +19,17 @@
   }
 
   &__img {
-    height: 75px;
+    height: 7.5rem;
   }
 
   &__price {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 5px;
+    gap: 0.5rem;
 
     &__img {
-      max-width: 25px;
+      max-width: 2.5rem;
     }
   }
 }
