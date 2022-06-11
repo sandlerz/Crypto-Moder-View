@@ -1,4 +1,5 @@
-import { arrow, bookMark, bookMarkFilling } from '../Assets/Images/Util/index'
+import { arrow } from '../Assets/Images/Util/index'
+import SaveIcon from './SaveIcon'
 
 export default function TrendingCoin({ data }) {
   const { icon, priceChange1d, symbol } = data
@@ -14,9 +15,7 @@ export default function TrendingCoin({ data }) {
         </div>
         <span className="trendingCoin__price__num green">{priceChange1d}%</span>
       </div>
-      <div className="trendingCoin__save">
-        <img src={bookMark} alt="" />
-      </div>
+      <SaveIcon measure="larger" />
     </div>
   )
 }
