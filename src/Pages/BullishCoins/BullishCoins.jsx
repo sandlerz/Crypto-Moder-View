@@ -9,9 +9,9 @@ export default function BullishCoins() {
   ))
 
   return (
-    <main className="trend-coins">
+    <main className="coins-page">
       <h1>Bullish Coins</h1>
-      <section className="trend-coins__coins">{mapBullishCoins}</section>
+      <section className="coins-page__coins">{mapBullishCoins}</section>
     </main>
   )
 }

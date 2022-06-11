@@ -7,9 +7,9 @@ export default function Save() {
   const mapSaveCoins = saveCoins.map(data => <Coin data={data} key={data.id} />)
 
   return (
-    <main className="save-coins">
+    <main className="coins-page">
       <h1>Save coins</h1>
-      <section className="save-coins__coins">{mapSaveCoins}</section>
+      <section className="coins-page__coins">{mapSaveCoins}</section>
     </main>
   )
 }
