@@ -19,8 +19,7 @@
   }
 
   &__img {
-    min-width: 75px;
-    max-width: 75px;
+    height: 75px;
   }
 
   &__price {
@@ -32,15 +31,5 @@
     &__img {
       max-width: 25px;
     }
-  }
-
-  &__save {
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background-color: gray;
-    right: 8px;
-    top: 8px;
   }
 }

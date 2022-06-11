@@ -1,9 +1,10 @@
 .coin {
+  position: relative;
+  padding: 10px;
   width: 248px;
   height: 115px;
   background-color: var(--elements-color);
   border-radius: 20px;
-  padding: 10px;
 
   &__top {
     display: grid;
@@ -31,14 +32,6 @@
         white-space: nowrap;
       }
     }
-
-    &__save {
-      width: 100%;
-      margin-left: auto;
-      background-color: white;
-      height: 20px;
-      border-radius: 50%;
-    }
   }
 
   &__bottom {
@@ -64,6 +57,7 @@
     }
   }
 }
+
 .green {
   color: var(--text-green);
 }

@@ -1,3 +1,15 @@
+import { useSelector } from 'react-redux'
+import Coin from '../../Components/Coin'
+import { selectSaveCoins } from './SaveSlice'
+
 export default function Save() {
-  return <div>this page is not ready</div>
+  const saveCoins = useSelector(selectSaveCoins)
+  const mapSaveCoins = saveCoins.map(data => <Coin data={data} key={data.id} />)
+
+  return (
+    <main className="coins-page">
+      <h1>Save coins</h1>
+      <section className="coins-page__coins">{mapSaveCoins}</section>
+    </main>
+  )
 }
