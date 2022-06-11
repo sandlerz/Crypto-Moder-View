@@ -7,6 +7,7 @@ export default function BullishCoins() {
   const mapBullishCoins = bullishCoins.map(data => (
     <Coin data={data} key={data.id} />
   ))
+
   return (
     <main className="trend-coins">
       <h1>Bullish Coins</h1>
