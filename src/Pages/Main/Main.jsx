@@ -1,17 +1,10 @@
-import { useEffect } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import {
-  getCurrencies,
-  selectCoins,
-  selectTrending,
-  selectCoinsFilter,
-} from './MainSlice'
+import { useSelector } from 'react-redux'
+import { selectCoins, selectTrending, selectCoinsFilter } from './MainSlice'
 import Coin from '../../Components/Coin'
 import Search from '../../Components/Search'
 import TrendingCoin from '../../Components/TrendingCoin'
 
 export default function Main() {
-  const dispatch = useDispatch()
   const coins = useSelector(selectCoins)
   const trendingCoins = useSelector(selectTrending)
   const filter = useSelector(selectCoinsFilter)
@@ -25,12 +18,6 @@ export default function Main() {
   const trending = trendingCoins.map(data => (
     <TrendingCoin data={data} key={data.id} />
   ))
-
-  useEffect(() => {
-    if (coins.length === 0) {
-      dispatch(getCurrencies())
-    }
-  }, [dispatch, coins.length])
 
   return (
     <main className="main">
