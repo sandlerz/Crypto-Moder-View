@@ -1,17 +1,20 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const saveCoins = createSlice({
-  name: 'save',
+  name: 'saveCoins',
   initialState: {
     saveCoins: [],
   },
   reducers: {
-    addSave: (state, action) => state.saveCoins.concat(action.payload),
-    removeSave: (state, actions) =>
-      state.saveCoins.filter(coin => coin !== actions.payload),
+    addSave: (state, action) => {
+      state.saveCoins.push(action.payload)
+    },
+    removeSave: (state, actions) => {
+      state.saveCoins = state.saveCoins.filter(coin => coin === actions.payload)
+    },
   },
 })
 
-export const selectSaveCoins = state => state.save.saveCoins
-export const { addSave } = saveCoins.actions
+export const selectSaveCoins = state => state.saveCoins.saveCoins
+export const { addSave, removeSave } = saveCoins.actions
 export default saveCoins.reducer

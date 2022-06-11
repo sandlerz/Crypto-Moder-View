@@ -15,7 +15,7 @@ export default function TrendingCoin({ data }) {
         </div>
         <span className="trendingCoin__price__num green">{priceChange1d}%</span>
       </div>
-      <SaveIcon measure="larger" />
+      <SaveIcon measure="larger" data={data} />
     </div>
   )
 }

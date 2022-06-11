@@ -20,7 +20,7 @@ export default function Coin({ data }) {
           </span>
           <span>$ {cutDecimals(price)}</span>
         </div>
-        <SaveIcon measure="medium" />
+        <SaveIcon measure="medium" data={data} />
       </div>
       <div className="coin__bottom">
         <span>24h %</span>
