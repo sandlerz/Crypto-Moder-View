@@ -6,11 +6,13 @@ const saveCoins = createSlice({
     saveCoins: [],
   },
   reducers: {
-    addSave: (state, action) => {
+    addSave(state, action) {
       state.saveCoins.push(action.payload)
     },
-    removeSave: (state, actions) => {
-      state.saveCoins = state.saveCoins.filter(coin => coin === actions.payload)
+    removeSave(state, action) {
+      state.saveCoins = state.saveCoins.filter(
+        coin => coin.id !== action.payload
+      )
     },
   },
 })

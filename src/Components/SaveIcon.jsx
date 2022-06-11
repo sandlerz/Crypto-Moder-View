@@ -10,7 +10,7 @@ export default function SaveIcon({ data }) {
 
   const handleSave = () => {
     if (isSave) {
-      dispatch(removeSave(data))
+      dispatch(removeSave(data.id))
     } else {
       dispatch(addSave(data))
     }
