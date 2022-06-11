@@ -1,3 +1,7 @@
 export default function News() {
-  return <div>this page is not ready</div>
+  return (
+    <main>
+      <h1>News</h1>
+    </main>
+  )
 }
