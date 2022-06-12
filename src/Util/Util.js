@@ -10,3 +10,8 @@ export const cutDecimals = num => {
     return num.toLocaleString(undefined, { minimumFractionDigits: 8 })
   }
 }
+
+export const randomImg = arrImg => {
+  const randomNum = Math.floor(Math.random() * 4)
+  return arrImg[randomNum]
+}
