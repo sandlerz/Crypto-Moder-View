@@ -1,10 +1,15 @@
-.coins-page {
+.simply-page {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  &__coins {
+
+  &__container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 1rem;
+
+    &--news {
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
 }

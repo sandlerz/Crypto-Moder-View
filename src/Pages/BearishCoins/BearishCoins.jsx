@@ -8,9 +8,9 @@ export default function BearishCoins() {
     <Coin data={data} key={data.id} />
   ))
   return (
-    <main className="coins-page">
+    <main className="simply-page">
       <h1>Bearish Coins</h1>
-      <section className="coins-page__coins">{mapBullishCoins}</section>
+      <section className="simply-page__container">{mapBullishCoins}</section>
     </main>
   )
 }

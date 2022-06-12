@@ -7,9 +7,11 @@ export default function News() {
   const mapNews = news.map(newItem => <New data={newItem} key={newItem.id} />)
 
   return (
-    <main>
+    <main className="simply-page">
       <h1>News</h1>
-      <div>{mapNews}</div>
+      <div className="simply-page__container simply-page__container--news">
+        {mapNews}
+      </div>
     </main>
   )
 }
