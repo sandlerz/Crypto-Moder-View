@@ -6,6 +6,7 @@ export default function News() {
   const news = useSelector(selectNews)
   const mapNews = news.map(newItem => <New data={newItem} key={newItem.id} />)
 
+  console.log(news)
   return (
     <main>
       <h1>News</h1>
