@@ -13,7 +13,7 @@ const news = createSlice({
   },
   extraReducers: builder => {
     builder.addCase(getNewsData.fulfilled, (state, action) => {
-      state.news = action.payload
+      state.news = action.payload.news
     })
   },
 })
