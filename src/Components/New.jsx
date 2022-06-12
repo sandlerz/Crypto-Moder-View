@@ -12,7 +12,7 @@ export default function New({ data }) {
           src={imgURL}
           alt=""
           onError={({ currentTarget }) => {
-            currentTarget.onerror = null // prevents looping
+            currentTarget.onerror = null
             currentTarget.src = randomImg(arrImg)
           }}
         />
