@@ -11,6 +11,7 @@ import { scrollInterval } from '../../Util/Util'
 import InfiniteScroll from 'react-infinite-scroll-component'
 import { useState } from 'react'
 import CurrentBTC from '../../Components/CurrentBTC'
+import SelectCurrency from '../../Components/SelectCurrency'
 
 const seconds = 3000
 
@@ -72,7 +73,10 @@ export default function Main() {
       </section>
       <h1>Trending</h1>
       <section className="main__trendingCoins">{trending}</section>
-      <h2>Currencies</h2>
+      <div className="main__trendingCoins__header">
+        <h2>Currencies</h2>
+        <SelectCurrency />
+      </div>
       <InfiniteScroll
         dataLength={mapCoins.length}
         next={handleSliceMap}

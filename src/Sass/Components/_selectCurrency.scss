@@ -1,0 +1,30 @@
+.SelectCurrency {
+  color: var(--text-main);
+  border: 0.1rem solid var(--text-main);
+  padding: 0.5rem 3rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  z-index: 10;
+
+  &__currency {
+    display: inline-block;
+    width: 3.3rem;
+    font-weight: 500;
+    color: var(--text-green);
+  }
+}
+
+.selectCurrency-animation {
+  animation: shimmerOverColor 0.3s;
+}
+
+@keyframes shimmerOverColor {
+  0% {
+    background-color: rgba(22, 199, 132, 1);
+  }
+  100% {
+    background-color: rgba(22, 199, 132, 0);
+  }
+}
