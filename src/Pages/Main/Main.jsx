@@ -72,7 +72,10 @@ export default function Main() {
       </section>
       <h1>Trending</h1>
       <section className="main__trendingCoins">{trending}</section>
-      <h2>Currencies</h2>
+      <div className="main__trendingCoins__header">
+        <h2>Currencies</h2>
+        <span>change me</span>
+      </div>
       <InfiniteScroll
         dataLength={mapCoins.length}
         next={handleSliceMap}
