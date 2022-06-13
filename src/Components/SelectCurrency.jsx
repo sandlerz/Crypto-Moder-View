@@ -1,10 +1,12 @@
-import { useState } from 'react'
+import { setCurrency, selectCurrency } from '../Pages/Main/MainSlice'
+import { useSelector, useDispatch } from 'react-redux/es/exports'
 
 export default function SelectCurrency() {
-  const [currency, setCurrency] = useState('USD')
+  const currency = useSelector(selectCurrency)
+  const dispatch = useDispatch()
 
   const handleCurrency = () => {
-    setCurrency(prev => (prev === 'USD' ? 'EUR' : 'USD'))
+    dispatch(setCurrency(currency === 'USD' ? 'EUR' : 'USD'))
   }
 
   return (
