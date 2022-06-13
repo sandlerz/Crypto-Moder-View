@@ -25,7 +25,7 @@ export default function App() {
 
   useEffect(() => {
     if (coins.length === 0) {
-      dispatch(getCurrencies({ limit: 10, currency: currency }))
+      dispatch(getCurrencies({ limit: 1000, currency: currency }))
     }
     if (news.length === 0) {
       dispatch(getNewsData())
@@ -33,7 +33,7 @@ export default function App() {
   }, [dispatch, coins.length, news.length, currency])
 
   useEffect(() => {
-    dispatch(getCurrencies({ limit: 10, currency: currency }))
+    dispatch(getCurrencies({ limit: 1000, currency: currency }))
   }, [currency, dispatch])
 
   return (
