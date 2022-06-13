@@ -20,7 +20,7 @@ export default function App() {
 
   useEffect(() => {
     if (coins.length === 0) {
-      dispatch(getCurrencies())
+      dispatch(getCurrencies(1000))
     }
     if (news.length === 0) {
       dispatch(getNewsData())
