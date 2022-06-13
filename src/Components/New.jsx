@@ -1,23 +1,29 @@
-import { randomImg } from '../Util/Util'
+import { randomImg, timeDifference } from '../Util/Util'
 import { news1, news2, news3, news4 } from '../Assets/Images/NewsImages'
 
 export default function New({ data }) {
-  const { description, feedDate, imgURL, link, source, title } = data
+  const { feedDate, imgURL, link, source, title } = data
   const arrImg = [news1, news2, news3, news4]
 
   return (
-    <div className="new">
+    <a href={link} target="_blank" rel="noreferrer" className="new">
       <div className="new__img">
         <img
           src={imgURL}
           alt=""
           onError={({ currentTarget }) => {
-            currentTarget.onerror = null // prevents looping
+            currentTarget.onerror = null
             currentTarget.src = randomImg(arrImg)
           }}
         />
       </div>
-      <p className="new__title">{title}</p>
-    </div>
+      <div className="new__body">
+        <p className="new__body__title">{title}</p>
+        <div className="new__body__source">
+          <span>Source: {source}</span>
+          <span>{timeDifference(feedDate)} ago</span>
+        </div>
+      </div>
+    </a>
   )
 }
