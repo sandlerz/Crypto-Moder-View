@@ -6,8 +6,8 @@ export default function CurrentBTC() {
   const [BTC] = useSelector(selectCoins)
 
   return (
-    <div>
-      BTC = <span>{cutDecimals(BTC.price)}</span> USD
+    <div className="CurrentBTC">
+      BTC = {BTC ? cutDecimals(BTC.price) : '...loading'} USD
     </div>
   )
 }
