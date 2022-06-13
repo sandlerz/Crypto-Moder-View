@@ -3,6 +3,7 @@ import { selectBullishCoins } from '../Main/MainSlice'
 import Coin from '../../Components/Coin'
 import InfiniteScroll from 'react-infinite-scroll-component'
 import { useState } from 'react'
+import CurrentBTC from '../../Components/CurrentBTC'
 
 export default function BullishCoins() {
   const [scroll, setScroll] = useState(50)
@@ -17,7 +18,10 @@ export default function BullishCoins() {
 
   return (
     <main className="simply-page">
-      <h1>Bullish Coins</h1>
+      <div className="simply-page__top">
+        <h1>Bullish Coins</h1>
+        <CurrentBTC />
+      </div>
       <InfiniteScroll
         dataLength={mapBullishCoins.length}
         next={handleSliceMap}
