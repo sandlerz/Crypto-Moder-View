@@ -3,8 +3,8 @@ import { getCoins } from '../../Util/Data'
 
 export const getCurrencies = createAsyncThunk(
   'currencies/getCurrencies',
-  async () => {
-    const response = await getCoins()
+  async (limit) => {
+    const response = await getCoins(limit)
     return response
   }
 )

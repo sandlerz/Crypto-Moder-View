@@ -8,10 +8,13 @@ import New from '../../Components/New'
 import { useRef } from 'react'
 import { useEffect } from 'react'
 import { scrollInterval } from '../../Util/Util'
+import InfiniteScroll from 'react-infinite-scroll-component'
+import { useState } from 'react'
 
 const seconds = 3000
 
 export default function Main() {
+  const [scroll, setScroll] = useState(25)
   const coins = useSelector(selectCoins)
   const trendingCoins = useSelector(selectTrending)
   const filter = useSelector(selectCoinsFilter)
@@ -23,6 +26,7 @@ export default function Main() {
       if (filter === '') return true
       return data.name.toLowerCase().includes(filter)
     })
+    .slice(0, scroll)
     .map(data => <Coin data={data} key={data.id} />)
 
   const trending = trendingCoins.map(data => (
@@ -31,16 +35,21 @@ export default function Main() {
 
   const mapNews = news.map(newItem => <New data={newItem} key={newItem.id} />)
 
-  useEffect(() => {
-    myRef.current[1] = scrollInterval(myRef.current[0], seconds)
-    const cleanId = myRef.current[1]
-    return () => clearInterval(cleanId)
-  }, [])
-
   const handleStop = () => clearInterval(myRef.current[1])
 
   const handleStart = () => {
     myRef.current[1] = scrollInterval(myRef.current[0], seconds)
+  }
+
+  useEffect(() => {
+    myRef.current[1] = scrollInterval(myRef.current[0], seconds)
+    const cleanId = myRef.current[1]
+
+    return () => clearInterval(cleanId)
+  }, [])
+
+  const handleSliceMap = () => {
+    setScroll(prev => (prev += 25))
   }
 
   return (
@@ -60,7 +69,14 @@ export default function Main() {
       <h1>Trending</h1>
       <section className="main__trendingCoins">{trending}</section>
       <h2>Currencies</h2>
-      <section className="main__coins">{mapCoins}</section>
+      <InfiniteScroll
+        dataLength={mapCoins.length}
+        next={handleSliceMap}
+        hasMore={true}
+        loader={<h4>Loading...</h4>}
+      >
+        <section className="main__coins">{mapCoins}</section>
+      </InfiniteScroll>
     </main>
   )
 }

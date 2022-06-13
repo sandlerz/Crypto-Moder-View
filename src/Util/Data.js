@@ -1,6 +1,6 @@
 const API_URL = 'https://api.coinstats.app/public/v1'
 
-export const getCoins = async (currency = 'USD', limit = '0') => {
+export const getCoins = async (limit = 500, currency = 'USD') => {
   try {
     const response = await fetch(
       `${API_URL}/coins?skip=0&limit=${limit}&currency=${currency}`
