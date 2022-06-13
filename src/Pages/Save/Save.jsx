@@ -1,5 +1,6 @@
 import { useSelector } from 'react-redux'
 import Coin from '../../Components/Coin'
+import CurrentBTC from '../../Components/CurrentBTC'
 import { selectSaveCoins } from './SaveSlice'
 
 export default function Save() {
@@ -8,7 +9,10 @@ export default function Save() {
 
   return (
     <main className="simply-page">
-      <h1>Save coins</h1>
+      <div className="simply-page__top">
+        <h1>Save coins</h1>
+        <CurrentBTC />
+      </div>
       <section className="simply-page__container">{mapSaveCoins}</section>
     </main>
   )
