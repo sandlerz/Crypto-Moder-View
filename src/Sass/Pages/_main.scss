@@ -6,6 +6,7 @@
   &__news {
     display: flex;
     gap: 2rem;
+    overflow-y: hidden;
     overflow-x: scroll;
     scroll-behavior: smooth;
   }
