@@ -20,41 +20,51 @@ export default function Navbar() {
           <li className="navbar__navLink__item">
             <NavLink
               to="/"
-              className={({ isActive }) => (isActive ? 'active' : '')}
+              className={({ isActive }) =>
+                isActive ? 'isActive' : 'deactivated'
+              }
             >
-              <img src={main} alt="" />
+              <img className="grid" src={main} alt="" />
             </NavLink>
           </li>
           <li className="navbar__navLink__item">
             <NavLink
               to="bullishCoins"
-              className={({ isActive }) => (isActive ? 'active' : '')}
+              className={({ isActive }) =>
+                isActive ? 'isActive' : 'deactivated'
+              }
             >
-              <img src={high} alt="" />
+              <img className="bullish" src={high} alt="" />
             </NavLink>
           </li>
           <li className="navbar__navLink__item">
             <NavLink
               to="bearishCoins"
-              className={({ isActive }) => (isActive ? 'active' : '')}
+              className={({ isActive }) =>
+                isActive ? 'isActive' : 'deactivated'
+              }
             >
-              <img src={low} alt="" />
+              <img className="bearish" src={low} alt="" />
             </NavLink>
           </li>
           <li className="navbar__navLink__item">
             <NavLink
               to="news"
-              className={({ isActive }) => (isActive ? 'active' : '')}
+              className={({ isActive }) =>
+                isActive ? 'isActive' : 'deactivated'
+              }
             >
-              <img src={news} alt="" />
+              <img className="news" src={news} alt="" />
             </NavLink>
           </li>
           <li className="navbar__navLink__item">
             <NavLink
               to="save"
-              className={({ isActive }) => (isActive ? 'active' : '')}
+              className={({ isActive }) =>
+                isActive ? 'isActive' : 'deactivated'
+              }
             >
-              <img src={save} alt="" />
+              <img className="save" src={save} alt="" />
             </NavLink>
           </li>
         </ul>
