@@ -1,28 +1,28 @@
 .navbar {
-  max-width: 90px;
-  min-width: 90px;
-  height: 850px;
+  max-width: 9rem;
+  min-width: 9rem;
+  height: 85rem;
   background-color: var(--elements-color);
-  border-radius: 20px;
+  border-radius: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  padding: 2rem;
 
   &__logo {
-    max-width: 50px;
-    padding-bottom: 20px;
-    border-bottom: 3px solid #10141f;
-    margin-bottom: 30px;
+    max-width: 5rem;
+    padding-bottom: 2rem;
+    border-bottom: 0.3rem solid #10141f;
+    margin-bottom: 3rem;
   }
 
   &__navLink {
     display: flex;
     flex-direction: column;
-    gap: 45px;
+    gap: 4.5rem;
 
     &__item {
-      max-width: 40px;
+      max-width: 4rem;
       transition: 1s transform;
 
       .active {
@@ -33,7 +33,7 @@
 
   &__settings {
     margin-top: auto;
-    max-width: 40px;
+    max-width: 4rem;
     cursor: pointer;
   }
 }

@@ -17,7 +17,7 @@ export const getCoins = async (currency = 'USD', limit = '0') => {
 
 export const getNews = async (limit = 20) => {
   try {
-    const response = await fetch(`${API_URL}news?skip=0&limit=${limit}`)
+    const response = await fetch(`${API_URL}/news?skip=0&limit=${limit}`)
     if (response.ok) {
       const data = await response.json()
       return data

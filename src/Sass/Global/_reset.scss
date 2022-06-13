@@ -2,6 +2,7 @@
 
 html {
   box-sizing: border-box;
+  font-size: 62.5%;
 }
 
 *,
@@ -13,13 +14,13 @@ html {
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
   font-family: 'Inter', sans-serif;
   background-color: var(--bg-color);
   background-image: url('../../Assets/Images/Util/bg-frame.svg');
-  background-size: 45px;
+  background-size: 4.5rem;
   background-repeat: repeat 0 0;
   animation: infiniteMove linear infinite 10s;
+  font-size: 1.6rem;
 
   @keyframes infiniteMove {
     0% {
@@ -42,8 +43,9 @@ p {
 
 img {
   display: block;
-  height: auto;
-  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 li {

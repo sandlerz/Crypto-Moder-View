@@ -31,6 +31,7 @@
 
 - See price and tendency of crypto coins
 - Search for any crypto
+- user can save any crypto that he wants
 
 ## Future work
 
