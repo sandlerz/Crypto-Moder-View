@@ -9,6 +9,8 @@ import { useRef } from 'react'
 import { useEffect } from 'react'
 import { scrollInterval } from '../../Util/Util'
 
+const seconds = 3000
+
 export default function Main() {
   const coins = useSelector(selectCoins)
   const trendingCoins = useSelector(selectTrending)
@@ -30,7 +32,7 @@ export default function Main() {
   const mapNews = news.map(newItem => <New data={newItem} key={newItem.id} />)
 
   useEffect(() => {
-    myRef.current[1] = scrollInterval(myRef)
+    myRef.current[1] = scrollInterval(myRef.current[0], seconds)
     const cleanId = myRef.current[1]
     return () => clearInterval(cleanId)
   }, [])
@@ -38,7 +40,7 @@ export default function Main() {
   const handleStop = () => clearInterval(myRef.current[1])
 
   const handleStart = () => {
-    myRef.current[1] = scrollInterval(myRef)
+    myRef.current[1] = scrollInterval(myRef.current[0], seconds)
   }
 
   return (
