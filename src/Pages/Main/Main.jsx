@@ -10,6 +10,7 @@ import { useEffect } from 'react'
 import { scrollInterval } from '../../Util/Util'
 import InfiniteScroll from 'react-infinite-scroll-component'
 import { useState } from 'react'
+import CurrentBTC from '../../Components/CurrentBTC'
 
 const seconds = 3000
 
@@ -54,7 +55,10 @@ export default function Main() {
 
   return (
     <main className="main">
-      <Search />
+      <div className="main__top">
+        <Search />
+        <CurrentBTC />
+      </div>
       <h1>News</h1>
       <section
         className="main__news"
