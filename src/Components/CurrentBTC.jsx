@@ -7,7 +7,9 @@ export default function CurrentBTC() {
 
   return (
     <div className="CurrentBTC">
-      BTC = {BTC ? cutDecimals(BTC.price) : '...loading'} USD
+      <span className="CurrentBTC__BTC">BTC</span> ={' '}
+      {BTC ? cutDecimals(BTC.price) : '...loading'}{' '}
+      <span className="CurrentBTC__USD">USD</span>
     </div>
   )
 }
