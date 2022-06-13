@@ -12,8 +12,8 @@ export default function SelectCurrency() {
     dispatch(setCurrency(currency === 'USD' ? 'EUR' : 'USD'))
   }
 
-  const handleAnimation = event => {
-    const element = event.target.querySelector('.SelectCurrency__currency')
+  const handleAnimation = () => {
+    const element = document.querySelector('.SelectCurrency__currency')
     element.classList.add('selectCurrency-animation')
     myRef.current = setTimeout(() => {
       element.classList.remove('selectCurrency-animation')
@@ -26,19 +26,13 @@ export default function SelectCurrency() {
 
   return (
     <div
-      onClick={e => {
+      onClick={() => {
         handleCurrency()
-        handleAnimation(e)
+        handleAnimation()
       }}
       className="SelectCurrency"
     >
-      Currency ={' '}
-      <span
-        className="SelectCurrency__currency"
-        // ref={myRef}
-      >
-        {currency}
-      </span>
+      Currency = <span className="SelectCurrency__currency">{currency}</span>
     </div>
   )
 }

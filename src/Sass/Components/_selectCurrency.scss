@@ -5,6 +5,8 @@
   border-radius: 1rem;
   cursor: pointer;
   user-select: none;
+  position: relative;
+  z-index: 10;
 
   &__currency {
     display: inline-block;
