@@ -33,15 +33,14 @@
 - Search for any crypto
 - User can save any crypto that he wants
 - User can see the latest news about the crypto word
+- Users can select theirs favorite currency(USD or EUR)
+- User can keep track bitcoin at the top of the page
+- When user scroll down, he can load more cryptos
 
 ## Future work
 
-- select currency (USD or EUR)
-- keep track of bitcoin at the top of the page
 - select different categories of news
-- Responsive Scroll
 - if you click on cards it redirects you to the coin page
-- style navbar, and different when change page
 
 ## Setup
 
