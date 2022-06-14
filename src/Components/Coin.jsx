@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { arrow } from '../Assets/Images/Util/index'
 import { cutDecimals } from '../Util/Util'
 import SaveIcon from './SaveIcon'
@@ -7,6 +8,18 @@ export default function Coin({ data }) {
 
   const colorPriceChange1d = Math.sign(priceChange1d) === 1 ? 'green' : 'red'
   const colorPriceChange1w = Math.sign(priceChange1w) === 1 ? 'green' : 'red'
+
+  useEffect(() => {
+    const priceElement = document.getElementById(
+      `coin__top__title__price__${symbol}`
+    )
+    priceElement.classList.add('coin-change-price-animation')
+    const clearTime = setTimeout(() => {
+      priceElement.classList.remove('coin-change-price-animation')
+    }, 300)
+
+    return () => clearTimeout(clearTime)
+  }, [price, symbol])
 
   return (
     <div className="coin">
@@ -18,7 +31,12 @@ export default function Coin({ data }) {
           <span className="coin__top__title__name">
             {name} <span>({symbol})</span>
           </span>
-          <span>$ {cutDecimals(price)}</span>
+          <span>
+            ${' '}
+            <span id={`coin__top__title__price__${symbol}`}>
+              {cutDecimals(price)}
+            </span>
+          </span>
         </div>
         <SaveIcon measure="medium" data={data} />
       </div>

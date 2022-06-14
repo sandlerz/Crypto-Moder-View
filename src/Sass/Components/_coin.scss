@@ -77,3 +77,16 @@
 .red {
   color: var(--text-red);
 }
+
+.coin-change-price-animation {
+  animation: shimmerOverColor-price 0.3s;
+}
+
+@keyframes shimmerOverColor-price {
+  0% {
+    background-color: rgba(255, 255, 255, 1);
+  }
+  100% {
+    background-color: rgba(255, 255, 255, 0);
+  }
+}

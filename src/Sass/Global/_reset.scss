@@ -19,17 +19,17 @@ body {
   background-image: url('../../Assets/Images/Util/bg-frame.svg');
   background-size: 4.5rem;
   background-repeat: repeat 0 0;
-  animation: infiniteMove linear infinite 10s;
+  // animation: infiniteMove linear infinite 5s;
   font-size: 1.6rem;
 
-  @keyframes infiniteMove {
-    0% {
-      background-position: 0 0;
-    }
-    100% {
-      background-position: 160px 160px;
-    }
-  }
+  // @keyframes infiniteMove {
+  //   0% {
+  //     background-position: 0 0;
+  //   }
+  //   100% {
+  //     background-position: 16rem 16rem;
+  //   }
+  // }
 }
 
 h1,
