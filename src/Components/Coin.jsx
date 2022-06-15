@@ -32,9 +32,14 @@ export default function Coin({ data }) {
   return (
     <div className="coin">
       <div className="coin__top">
-        <div className="coin__top__img">
+        <a
+          className="coin__top__img"
+          href={websiteUrl}
+          target="_blank"
+          rel="noreferrer"
+        >
           <img src={icon} alt="" />
-        </div>
+        </a>
         <div className="coin__top__title">
           <a
             className="coin__top__title__name"
