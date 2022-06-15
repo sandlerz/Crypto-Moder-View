@@ -4,7 +4,15 @@ import { cutDecimals } from '../Util/Util'
 import SaveIcon from './SaveIcon'
 
 export default function Coin({ data }) {
-  const { name, symbol, icon, price, priceChange1d, priceChange1w } = data
+  const {
+    name,
+    symbol,
+    icon,
+    price,
+    priceChange1d,
+    priceChange1w,
+    websiteUrl,
+  } = data
 
   const colorPriceChange1d = Math.sign(priceChange1d) === 1 ? 'green' : 'red'
   const colorPriceChange1w = Math.sign(priceChange1w) === 1 ? 'green' : 'red'
@@ -24,13 +32,23 @@ export default function Coin({ data }) {
   return (
     <div className="coin">
       <div className="coin__top">
-        <div className="coin__top__img">
+        <a
+          className="coin__top__img"
+          href={websiteUrl}
+          target="_blank"
+          rel="noreferrer"
+        >
           <img src={icon} alt="" />
-        </div>
+        </a>
         <div className="coin__top__title">
-          <span className="coin__top__title__name">
+          <a
+            className="coin__top__title__name"
+            href={websiteUrl}
+            target="_blank"
+            rel="noreferrer"
+          >
             {name} <span>({symbol})</span>
-          </span>
+          </a>
           <span>
             ${' '}
             <span id={`coin__top__title__price__${symbol}`}>

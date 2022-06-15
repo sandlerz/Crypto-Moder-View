@@ -61,19 +61,23 @@ export default function Main() {
         <CurrentBTC />
       </div>
       <h1>News</h1>
-      <section
-        className="main__news"
-        ref={element => {
-          myRef.current.push(element)
-        }}
-        onMouseEnter={handleStop}
-        onMouseLeave={handleStart}
-      >
-        {mapNews}
-      </section>
+      <div className="main__news">
+        <section
+          className="main__news__items"
+          ref={element => {
+            myRef.current.push(element)
+          }}
+          onMouseEnter={handleStop}
+          onMouseLeave={handleStart}
+        >
+          {mapNews}
+        </section>
+      </div>
       <h1>Trending</h1>
-      <section className="main__trendingCoins">{trending}</section>
-      <div className="main__trendingCoins__header">
+      <div className="main__trendingCoins">
+        <section className="main__trendingCoins__items">{trending}</section>
+      </div>
+      <div className="main__coins__header">
         <h2>Currencies</h2>
         <SelectCurrency />
       </div>
@@ -82,6 +86,7 @@ export default function Main() {
         next={handleSliceMap}
         hasMore={true}
         loader={<h4>Loading...</h4>}
+        style={{ overflow: 'initial' }}
       >
         <section className="main__coins">{mapCoins}</section>
       </InfiniteScroll>
