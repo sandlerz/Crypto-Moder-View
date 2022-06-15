@@ -10,46 +10,84 @@
   }
 
   &__news {
-    display: flex;
-    gap: 2rem;
-    overflow-y: hidden;
-    overflow-x: scroll;
-    scroll-behavior: smooth;
-  }
+    position: relative;
 
-  &__trendingCoins {
-    display: flex;
-    gap: 2rem;
-    width: 100%;
-    overflow-x: scroll;
-    padding-bottom: 0.5rem;
-    scrollbar-color: #fff transparent;
-    scrollbar-width: thin;
-
-    &__header {
+    &__items {
       display: flex;
-      align-items: center;
-      justify-content: space-between;
+      gap: 2rem;
+      overflow-y: hidden;
+      overflow-x: scroll;
+      scroll-behavior: smooth;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 0;
+      display: block;
+      width: 8%;
+      height: 100%;
+      background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.5)
+      );
     }
   }
 
-  &__trendingCoins::-webkit-scrollbar,
-  &__news::-webkit-scrollbar {
+  &__trendingCoins {
+    position: relative;
+
+    &__items {
+      display: flex;
+      gap: 2rem;
+      width: 100%;
+      overflow-x: scroll;
+      padding-bottom: 0.5rem;
+      scrollbar-color: #fff transparent;
+      scrollbar-width: thin;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 0;
+      display: block;
+      width: 8%;
+      height: 100%;
+      background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.8)
+      );
+    }
+  }
+
+  &__coins__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__trendingCoins__items::-webkit-scrollbar,
+  &__news__items::-webkit-scrollbar {
     height: 0.5rem;
   }
 
-  &__trendingCoins::-webkit-scrollbar-track,
-  &__news::-webkit-scrollbar-track {
+  &__trendingCoins__items::-webkit-scrollbar-track,
+  &__news__items::-webkit-scrollbar-track {
     background: transparent;
   }
 
-  &__trendingCoins::-webkit-scrollbar-thumb,
-  &__news::-webkit-scrollbar-thumb {
+  &__trendingCoins__items::-webkit-scrollbar-thumb,
+  &__news__items::-webkit-scrollbar-thumb {
     background: #fff;
   }
 
-  &__trendingCoins::-webkit-scrollbar-thumb:hover,
-  &__news::-webkit-scrollbar-thumb:hover {
+  &__trendingCoins__items::-webkit-scrollbar-thumb:hover,
+  &__news__items::-webkit-scrollbar-thumb:hover {
     background: #555;
   }
 
