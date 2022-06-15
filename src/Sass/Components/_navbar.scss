@@ -8,6 +8,7 @@
   flex-direction: column;
   align-items: center;
   padding: 2rem;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
 
   &__logo {
     max-width: 5rem;
@@ -25,8 +26,24 @@
       max-width: 4rem;
       transition: 1s transform;
 
-      .active {
-        transform: scale(1.2);
+      .deactivated {
+        img {
+          transition: 0.3s transform;
+        }
+      }
+
+      .isActive {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background-color: rgba($color: #000000, $alpha: 0.5);
+        transform: scale(1.6);
+        transition: 0.3s transform;
+
+        .bearish {
+          transform: rotate(180deg) scale(1.2);
+        }
       }
     }
   }
@@ -36,4 +53,30 @@
     max-width: 4rem;
     cursor: pointer;
   }
+}
+
+.grid {
+  filter: invert(35%) sepia(44%) saturate(1074%) hue-rotate(178deg)
+    brightness(91%) contrast(91%);
+}
+
+.bullish {
+  filter: invert(48%) sepia(78%) saturate(2239%) hue-rotate(85deg)
+    brightness(84%) contrast(79%);
+}
+
+.bearish {
+  transform: rotate(180deg);
+  filter: invert(9%) sepia(84%) saturate(6385%) hue-rotate(1deg) brightness(94%)
+    contrast(111%);
+}
+
+.news {
+  filter: invert(39%) sepia(16%) saturate(5241%) hue-rotate(141deg)
+    brightness(100%) contrast(101%);
+}
+
+.save {
+  filter: invert(83%) sepia(0%) saturate(972%) hue-rotate(152deg)
+    brightness(93%) contrast(87%);
 }

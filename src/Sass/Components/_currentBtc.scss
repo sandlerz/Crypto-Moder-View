@@ -1,0 +1,15 @@
+.CurrentBTC {
+  color: var(--text-main);
+  font-weight: 500;
+  border-radius: 1rem;
+  border: 0.1rem solid var(--text-main);
+  padding: 1rem 2rem;
+
+  &__BTC {
+    color: #f7941d;
+  }
+
+  &__USD {
+    color: var(--text-green);
+  }
+}

@@ -3,8 +3,8 @@ import { getCoins } from '../../Util/Data'
 
 export const getCurrencies = createAsyncThunk(
   'currencies/getCurrencies',
-  async () => {
-    const response = await getCoins()
+  async ({ limit, currency }) => {
+    const response = await getCoins(limit, currency)
     return response
   }
 )
@@ -17,10 +17,14 @@ const currencies = createSlice({
     bearishCoins: [],
     trending: [],
     filter: '',
+    currency: 'USD',
   },
   reducers: {
     setFilter: (state, action) => {
       state.filter = action.payload
+    },
+    setCurrency: (state, action) => {
+      state.currency = action.payload
     },
   },
   extraReducers: builder => {
@@ -48,6 +52,7 @@ export const selectBullishCoins = state => state.currencies.bullishCoins
 export const selectBearishCoins = state => state.currencies.bearishCoins
 export const selectTrending = state => state.currencies.trending
 export const selectCoinsFilter = state => state.currencies.filter
+export const selectCurrency = state => state.currencies.currency
 
-export const { setFilter } = currencies.actions
+export const { setFilter, setCurrency } = currencies.actions
 export default currencies.reducer
