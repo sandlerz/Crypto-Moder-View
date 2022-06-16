@@ -85,7 +85,6 @@ export default function Main() {
         dataLength={mapCoins.length}
         next={handleSliceMap}
         hasMore={true}
-        loader={<h4>Loading...</h4>}
         style={{ overflow: 'initial' }}
       >
         <section className="main__coins">{mapCoins}</section>
