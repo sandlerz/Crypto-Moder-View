@@ -11,6 +11,7 @@
 
   &__news {
     position: relative;
+    min-height: 20.5rem;
 
     &__items {
       display: flex;
@@ -38,6 +39,7 @@
 
   &__trendingCoins {
     position: relative;
+    min-height: 16rem;
 
     &__items {
       display: flex;
@@ -96,4 +98,10 @@
     grid-template-columns: repeat(5, 1fr);
     gap: 1rem;
   }
+}
+
+.currencies__no__found {
+  color: var(--text-main);
+  font-weight: 400;
+  text-align: center;
 }

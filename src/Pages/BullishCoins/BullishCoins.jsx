@@ -26,7 +26,7 @@ export default function BullishCoins() {
         dataLength={mapBullishCoins.length}
         next={handleSliceMap}
         hasMore={true}
-        loader={<h4>Loading...</h4>}
+        style={{ overflow: 'initial' }}
       >
         <section className="simply-page__container">{mapBullishCoins}</section>
       </InfiniteScroll>
