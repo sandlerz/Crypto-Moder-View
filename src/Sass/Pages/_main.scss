@@ -11,6 +11,7 @@
 
   &__news {
     position: relative;
+    min-height: 20.5rem;
 
     &__items {
       display: flex;
@@ -38,6 +39,7 @@
 
   &__trendingCoins {
     position: relative;
+    min-height: 16rem;
 
     &__items {
       display: flex;
