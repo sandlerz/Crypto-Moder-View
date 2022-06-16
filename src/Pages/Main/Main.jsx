@@ -87,7 +87,11 @@ export default function Main() {
         hasMore={true}
         style={{ overflow: 'initial' }}
       >
-        <section className="main__coins">{mapCoins}</section>
+        {mapCoins.length ? (
+          <section className="main__coins">{mapCoins}</section>
+        ) : (
+          <h3 className="currencies__no__found">Currencies no found</h3>
+        )}
       </InfiniteScroll>
     </main>
   )
