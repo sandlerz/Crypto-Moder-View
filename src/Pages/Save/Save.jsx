@@ -13,7 +13,11 @@ export default function Save() {
         <h1>Save coins</h1>
         <CurrentBTC />
       </div>
-      <section className="simply-page__container">{mapSaveCoins}</section>
+      {mapSaveCoins.length ? (
+        <section className="simply-page__container">{mapSaveCoins}</section>
+      ) : (
+        <h3 className="currencies__no__found">There aren't save coins</h3>
+      )}
     </main>
   )
 }
