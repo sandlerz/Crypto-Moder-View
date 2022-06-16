@@ -1,20 +1,20 @@
 .navbar {
-  max-width: 9rem;
-  min-width: 9rem;
-  height: 85rem;
+  margin: 0 auto auto;
+  width: 7rem;
+  height: 70rem;
   background-color: var(--elements-color);
   border-radius: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem;
+  padding: 1.8rem;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
 
   &__logo {
     max-width: 5rem;
     padding-bottom: 2rem;
     border-bottom: 0.3rem solid #10141f;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
   }
 
   &__navLink {
@@ -24,7 +24,12 @@
 
     &__item {
       max-width: 4rem;
-      transition: 1s transform;
+      transition: 0.3s all;
+
+      &:hover {
+        background-color: #f7941d;
+        border-radius: 50%;
+      }
 
       .deactivated {
         img {
@@ -37,9 +42,11 @@
         width: 100%;
         height: 100%;
         border-radius: 50%;
-        background-color: rgba($color: #000000, $alpha: 0.5);
-        transform: scale(1.6);
+        transform: scale(3);
         transition: 0.3s transform;
+        background-color: var(--elements-color);
+
+        padding: 10px;
 
         .bearish {
           transform: rotate(180deg) scale(1.2);
