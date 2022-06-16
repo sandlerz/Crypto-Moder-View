@@ -16,9 +16,13 @@ html {
 body {
   font-family: 'Inter', sans-serif;
   background-color: var(--bg-color);
-  background-image: url('../../Assets/Images/Util/bg-frame.svg');
+  background-image: linear-gradient(
+      rgb(34, 37, 49) 0%,
+      rgba(23, 23, 26, 0.3) 10rem
+    ),
+    url('../../Assets/Images/Util/bg-frame.svg');
   background-size: 4.5rem;
-  background-repeat: repeat 0 0;
+  // background-repeat: repeat 0 0;
   // animation: infiniteMove linear infinite 5s;
   font-size: 1.6rem;
 
