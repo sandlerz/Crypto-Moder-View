@@ -31,9 +31,9 @@ export default function Main() {
     .slice(0, scroll)
     .map(data => <Coin data={data} key={data.id} />)
 
-  const trending = trendingCoins.map(data => (
-    <TrendingCoin data={data} key={data.id} />
-  ))
+  const trending = trendingCoins
+    .slice(0, 15)
+    .map(data => <TrendingCoin data={data} key={data.id} />)
 
   const mapNews = news.map(newItem => <New data={newItem} key={newItem.id} />)
 
