@@ -31,9 +31,9 @@ export default function Main() {
     .slice(0, scroll)
     .map(data => <Coin data={data} key={data.id} />)
 
-  const trending = trendingCoins.map(data => (
-    <TrendingCoin data={data} key={data.id} />
-  ))
+  const trending = trendingCoins
+    .slice(0, 15)
+    .map(data => <TrendingCoin data={data} key={data.id} />)
 
   const mapNews = news.map(newItem => <New data={newItem} key={newItem.id} />)
 
@@ -85,10 +85,13 @@ export default function Main() {
         dataLength={mapCoins.length}
         next={handleSliceMap}
         hasMore={true}
-        loader={<h4>Loading...</h4>}
         style={{ overflow: 'initial' }}
       >
-        <section className="main__coins">{mapCoins}</section>
+        {mapCoins.length ? (
+          <section className="main__coins">{mapCoins}</section>
+        ) : (
+          <h3 className="currencies__no__found">Currencies no found</h3>
+        )}
       </InfiniteScroll>
     </main>
   )
